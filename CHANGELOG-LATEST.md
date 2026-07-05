@@ -1,3 +1,3 @@
 ### Fixed
 
-- Added `field:star_banner_pattern` to the `c:loom_patterns` item tag.
+- Adjust banner pattern lang to match 1.21 conventions.

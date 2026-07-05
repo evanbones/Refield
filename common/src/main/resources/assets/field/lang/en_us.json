@@ -85,7 +85,7 @@
 		"block.field.banner.label_bottom": "Label Base",
 
 	"_CHARGES_": "",
-		"item.field.star_banner_pattern": "Mullet Charge Banner Pattern",
+		"item.field.star_banner_pattern": "Banner Pattern",
 		"item.field.star_banner_pattern.desc": "Mullet Charge",
 		"block.field.banner.star": "Mullet Charge"
 }
