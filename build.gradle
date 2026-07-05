@@ -1,97 +1,13 @@
 plugins {
-	id 'fabric-loom' version '1.10-SNAPSHOT'
-	id 'maven-publish'
+    id 'fabric-loom' version '1.15-SNAPSHOT' apply false
+    id 'net.neoforged.moddev' version '2.0.137' apply false
+    id 'me.modmuss50.mod-publish-plugin' version '1.1.0' apply false
+    id 'org.moddedmc.wiki.toolkit' version '0.4.1'
 }
 
-version = project.mod_version
-group = project.maven_group
-
-base {
-	archivesName = project.archives_base_name
-}
-
-repositories {
-	mavenCentral()
-	maven {
-		url = "https://api.modrinth.com/maven"
-	}
-}
-
-loom {
-	splitEnvironmentSourceSets()
-
-	mods {
-		"field" {
-			sourceSet sourceSets.main
-			sourceSet sourceSets.client
-		}
-	}
-
-	accessWidenerPath = file( "src/main/resources/field.accesswidener" )
-}
-
-fabricApi {
-	configureDataGeneration()
-}
-
-dependencies {
-	// To change the versions see the gradle.properties file
-	minecraft "com.mojang:minecraft:${stonecutter.current.version}"
-	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
-	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
-
-	// Fabric API. This is technically optional, but you probably want it anyway.
-	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-
-	modImplementation "com.ptsmods:devlogin:3.5"
-	modImplementation include ("maven.modrinth:midnightlib:${project.midnightlib_version}")
-}
-
-processResources {
-	inputs.property "version", project.version
-	inputs.property "minecraft", stonecutter.current.version
-
-	filesMatching("fabric.mod.json") {
-		expand "version": project.version
-		expand "minecraft": stonecutter.current.version
-	}
-}
-
-tasks.withType(JavaCompile).configureEach {
-	it.options.release = 21
-}
-
-java {
-	withSourcesJar()
-
-	def javaVersion = stonecutter.eval( minecraft_version, ">=1.20.5" )
-		? JavaVersion.VERSION_21
-		: JavaVersion.VERSION_17
-
-	sourceCompatibility = javaVersion
-	targetCompatibility = javaVersion
-}
-
-jar {
-	from("LICENSE") {
-		rename { "${it}_${project.base.archivesName.get()}"}
-	}
-}
-
-// configure the maven publication
-publishing {
-	publications {
-		create("mavenJava", MavenPublication) {
-			artifactId = project.archives_base_name
-			from components.java
-		}
-	}
-
-	// See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
-	repositories {
-		// Add repositories to publish to here.
-		// Notice: This block does NOT have the same function as the block in the top level.
-		// The repositories here will be used for publishing your artifact, not for
-		// retrieving dependencies.
-	}
+wiki {
+    wikiAccessToken = System.getenv("WIKI_ACCESS_TOKEN")
+    docs.create("field") {
+        root = file("docs/")
+    }
 }
