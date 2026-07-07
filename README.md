@@ -23,6 +23,7 @@ Let your creativity fly!
 - Refield uses YACL for in-game configuration instead of MidnightLib
 - The star banner pattern's item texture was changed to match the older 1.21 style (the original is still present in the
   mod resources if desired)
+- Optional integration with Supplementaries flags.
 
 ---
 
