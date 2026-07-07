@@ -1,4 +1,4 @@
-package dev.trigam.field.mixin.bannerPlacement;
+package dev.trigam.field.mixin.banner_placement;
 
 import dev.trigam.field.config.ModConfig;
 import net.minecraft.world.entity.EquipmentSlot;

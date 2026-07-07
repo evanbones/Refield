@@ -1,4 +1,4 @@
-package dev.trigam.field.mixin.bannerPlacement;
+package dev.trigam.field.mixin.banner_placement;
 
 import dev.trigam.field.block.HangingBannerBlock;
 import dev.trigam.field.block.WallHangingBannerBlock;

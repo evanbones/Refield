@@ -41,6 +41,10 @@ dependencies {
     // EMI
     runtimeOnly "dev.emi:emi-neoforge:${emi_version}"
 
+    // Supplementaries
+    implementation "maven.modrinth:supplementaries:${supplementaries_version_neoforge}"
+    implementation "maven.modrinth:moonlight:${moonlight_version_neoforge}"
+
     // YACL
     implementation "maven.modrinth:yacl:${yacl_version}-neoforge"
 }

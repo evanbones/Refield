@@ -2,19 +2,22 @@
   "required": true,
   "minVersion": "0.8",
   "package": "dev.trigam.field.mixin",
-  "compatibilityLevel": "JAVA_21",
+  "plugin": "dev.trigam.field.mixin.FieldMixinConfigPlugin",
+  "compatibilityLevel": "JAVA_18",
   "mixins": [
-    "bannerLayers.BannerDuplicateRecipeFix",
-    "bannerLayers.LoomScreenHandlerFix",
-    "bannerPlacement.BannerItemPlacement",
-    "bannerPlacement.BannerItemWearableMixin",
-    "bannerPlacement.WallHangingSignsConnect",
+    "banner_layers.BannerDuplicateRecipeFix",
+    "banner_layers.LoomScreenHandlerFix",
+    "banner_placement.BannerItemPlacement",
+    "banner_placement.BannerItemWearableMixin",
+    "banner_placement.WallHangingSignsConnect",
     "tooltip.BannerItemTooltip",
-    "tooltip.ShieldItemTooltip"
+    "tooltip.ShieldItemTooltip",
+    "integration.supplementaries.FlagItemTooltipMixin",
+    "integration.supplementaries.FlagRecipeLimitMixin"
   ],
   "client": [
-    "client.bannerLayers.LoomScreenFix",
-    "client.loomTooltip.LoomScreenTooltip"
+    "client.banner_layers.LoomScreenFix",
+    "client.loom_tooltip.LoomScreenTooltip"
   ],
   "server": [],
   "injectors": {

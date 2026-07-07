@@ -1,4 +1,4 @@
-package dev.trigam.field.mixin.client.loomTooltip;
+package dev.trigam.field.mixin.client.loom_tooltip;
 
 import com.llamalad7.mixinextras.sugar.Local;
 import dev.trigam.field.config.ModConfig;

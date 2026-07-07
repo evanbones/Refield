@@ -12,7 +12,9 @@ import dev.trigam.field.client.renderer.WallHangingBannerRenderer;
 import dev.trigam.field.config.ModConfig;
 import dev.trigam.field.item.ItemInit;
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -69,6 +71,12 @@ public class Field {
         if (ModConfig.get().bannerStackSize != 16) {
             for (Item banner : BANNERS) {
                 event.modify(banner, builder -> builder.set(DataComponents.MAX_STACK_SIZE, ModConfig.get().bannerStackSize));
+            }
+            for (String color : Arrays.asList("white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray", "light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black")) {
+                ResourceLocation id = ResourceLocation.fromNamespaceAndPath("supplementaries", "flag_" + color);
+                BuiltInRegistries.ITEM.getOptional(id).ifPresent(item -> {
+                    event.modify(item, builder -> builder.set(DataComponents.MAX_STACK_SIZE, ModConfig.get().bannerStackSize));
+                });
             }
         }
     }

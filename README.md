@@ -116,10 +116,14 @@ translations be added for a datapack/mod!**
 
 ---
 
-# Compatabilities
+# Compatibilities
 
-Field has explicit compatability with:
+Refield has explicit compatibility with:
 
+- [Supplementaries](https://modrinth.com/mod/supplementaries),
+  by [MehVahdJukaar](https://modrinth.com/user/MehVahdJukaar)
+    - Adds compatibility for flags to work with Refield's features like custom stack sizes, extended layer limits, and
+      tooltips
 - [Banner Text](https://modrinth.com/datapack/banner-text), by [Snuzzle](https://modrinth.com/user/Snuzzle)
 - [Muki's Extra Banners](https://modrinth.com/datapack/mukis-extra-banners),
   by [MukiTanuku](https://modrinth.com/user/MukiTanuki)
@@ -128,7 +132,7 @@ Field has explicit compatability with:
 
 # Incompatabilities
 
-Field isn't compatible with:
+Refield isn't compatible with:
 
 - ["Limitless" Banners](https://modrinth.com/mod/%22limitless%22-banners), by [Mike](https://modrinth.com/user/Mike)
 

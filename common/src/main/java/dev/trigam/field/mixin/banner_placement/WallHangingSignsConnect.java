@@ -1,4 +1,4 @@
-package dev.trigam.field.mixin.bannerPlacement;
+package dev.trigam.field.mixin.banner_placement;
 
 import dev.trigam.field.tag.BlockTagInit;
 import net.minecraft.tags.TagKey;

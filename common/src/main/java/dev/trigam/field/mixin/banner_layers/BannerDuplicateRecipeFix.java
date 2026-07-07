@@ -1,4 +1,4 @@
-package dev.trigam.field.mixin.bannerLayers;
+package dev.trigam.field.mixin.banner_layers;
 
 import dev.trigam.field.config.ModConfig;
 import net.minecraft.world.item.crafting.BannerDuplicateRecipe;
