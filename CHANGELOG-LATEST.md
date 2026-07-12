@@ -1,3 +1,3 @@
-### Added
+### Fixed
 
-- Added compatibility for Flags from Supplementaries.
+- Fixed custom banner patterns on Supplementaries Flags.

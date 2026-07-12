@@ -17,7 +17,8 @@
   ],
   "client": [
     "client.banner_layers.LoomScreenFix",
-    "client.loom_tooltip.LoomScreenTooltip"
+    "client.loom_tooltip.LoomScreenTooltip",
+    "integration.supplementaries.client.ModClientDynamicResourcesMixin"
   ],
   "server": [],
   "injectors": {

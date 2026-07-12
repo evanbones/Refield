@@ -23,6 +23,7 @@ dependencies {
 
     // Supplementaries
     modCompileOnly "maven.modrinth:supplementaries:${supplementaries_version_fabric}"
+    modCompileOnly "maven.modrinth:moonlight:${moonlight_version_fabric}"
 
     modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
